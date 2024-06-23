@@ -29,8 +29,14 @@ func getWord() string {
 	if err != nil {
 		return "product";
 	}
-	fmt.Println("words", words)
+	for i,v := range words{
+		if len(v)>4 && len(v) <8 {
+			return words[i]
+		} 
+	}
+	
 	return words[0]
+	
 }
 
 func main() {
